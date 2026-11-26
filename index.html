@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aggrey Seiph Kassim | About Me &amp; Career</title>
+  <style>
+    :root {
+      --c1: #22d3ee; /* Cyan */
+      --c2: #34d399; /* Emerald Green */
+      --c3: #fbbf24; /* Amber Gold */
+      --c4: #a78bfa; /* Violet */
+      --c5: #fb7185; /* Coral Rose */
+      --c6: #38bdf8; /* Sky Blue */
+      --c7: #f97316; /* Vibrant Orange */
+
+      --bg-base: #060913;
+      --bg-panel: #0d1526;
+      --bg-item: #131f38;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+    }
+
+    @keyframes sevenColorFlow {
+      0%   { filter: hue-rotate(0deg); }
+      14%  { filter: hue-rotate(50deg); }
+      28%  { filter: hue-rotate(100deg); }
+      42%  { filter: hue-rotate(155deg); }
+      57%  { filter: hue-rotate(210deg); }
+      71%  { filter: hue-rotate(265deg); }
+      85%  { filter: hue-rotate(315deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    @keyframes sevenColorBorder {
+      0%   { border-color: var(--c1); box-shadow: 0 0 18px rgba(34, 211, 238, 0.25); }
+      16%  { border-color: var(--c2); box-shadow: 0 0 18px rgba(52, 211, 153, 0.25); }
+      33%  { border-color: var(--c3); box-shadow: 0 0 18px rgba(251, 191, 36, 0.25); }
+      50%  { border-color: var(--c4); box-shadow: 0 0 18px rgba(167, 139, 250, 0.25); }
+      66%  { border-color: var(--c5); box-shadow: 0 0 18px rgba(251, 113, 133, 0.25); }
+      83%  { border-color: var(--c6); box-shadow: 0 0 18px rgba(56, 189, 248, 0.25); }
+      100% { border-color: var(--c7); box-shadow: 0 0 18px rgba(249, 115, 22, 0.25); }
+    }
+
+    @keyframes sevenColorText {
+      0%   { color: var(--c1); }
+      16%  { color: var(--c2); }
+      33%  { color: var(--c3); }
+      50%  { color: var(--c4); }
+      66%  { color: var(--c5); }
+      83%  { color: var(--c6); }
+      100% { color: var(--c7); }
+    }
+
+    @keyframes ambientShift {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(120deg, #070b17, #0e172a, #16122b, #081c24, #1b1224);
+      background-size: 320% 320%;
+      animation: ambientShift 18s ease infinite;
+      color: var(--text-main);
+      line-height: 1.65;
+    }
+
+    /* PART 1: HEADER */
+    header.part-header {
+      background: linear-gradient(135deg, rgba(34, 211, 238, 0.14), rgba(15, 23, 42, 0.96), rgba(56, 189, 248, 0.14));
+      border-bottom: 2px solid var(--c1);
+      padding: 46px 20px 36px;
+      text-align: center;
+      animation: sevenColorBorder 14s linear infinite;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(34, 211, 238, 0.14);
+      border: 1px solid var(--c1);
+      color: var(--c1);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      animation: sevenColorText 10s linear infinite;
+    }
+
+    header.part-header h1 {
+      font-size: 2.35rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3), var(--c4), var(--c5), var(--c6), var(--c7));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: sevenColorFlow 12s linear infinite;
+      margin-bottom: 10px;
+    }
+
+    header.part-header p.subtitle {
+      color: var(--text-muted);
+      max-width: 780px;
+      margin: 0 auto 20px;
+      font-size: 1.03rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      transition: 0.25s ease;
+    }
+
+    nav a:hover {
+      border-color: var(--c2);
+      color: var(--c2);
+      transform: translateY(-2px);
+    }
+
+    main {
+      max-width: 980px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* PART 2: SINGLE FEATURED PHOTO */
+    section.part-gallery {
+      background: var(--bg-panel);
+      border-radius: 16px;
+      padding: 26px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(251, 113, 133, 0.35);
+    }
+
+    section.part-gallery h2 {
+      color: var(--c5);
+      font-size: 1.35rem;
+      margin-bottom: 16px;
+    }
+
+    .single-photo-wrap {
+      max-width: 380px;
+      margin: 0 auto;
+    }
+
+    .photo-card {
+      background: var(--bg-item);
+      border-radius: 14px;
+      padding: 14px;
+      text-align: center;
+      transition: transform 0.25s ease;
+      border: 2px solid var(--c5);
+    }
+
+    .photo-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .photo-frame {
+      width: 100%;
+      aspect-ratio: 4 / 4.5;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #090e1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      animation: sevenColorBorder 12s linear infinite;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .photo-card h3 {
+      color: var(--c5);
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    .photo-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* PART 3: STATS STRIP */
+    .part-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .stat-box {
+      background: var(--bg-panel);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      border-top: 4px solid var(--c2);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .stat-box .num {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--c2);
+      animation: sevenColorText 12s linear infinite;
+      margin-bottom: 4px;
+    }
+
+    .stat-box .label {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* PART 4: IDENTITY */
+    section.part-identity {
+      background: var(--bg-panel);
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      border-left: 5px solid var(--c3);
+      border-radius: 14px;
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+
+    section.part-identity h2 {
+      color: var(--c3);
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+    }
+
+    section.part-identity .info-item strong {
+      color: var(--c3);
+    }
+
+    /* PART 5: EDUCATION JOURNEY */
+    section.part-education {
+      background: var(--bg-panel);
+      border: 1px solid rgba(167, 139, 250, 0.35);
+      border-left: 5px solid var(--c4);
+      border-radius: 14px;
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+
+    section.part-education h2 {
+      color: var(--c4);
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+    }
+
+    .timeline {
+      border-left: 3px solid var(--c4);
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+
+    .timeline-item {
+      margin-bottom: 16px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item h3 {
+      color: var(--c4);
+      font-size: 1.05rem;
+      margin-bottom: 3px;
+    }
+
+    .timeline-item p {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+    }
+
+    /* PART 6: SKILLS & CAREER */
+    section.part-skills {
+      background: var(--bg-panel);
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      border-left: 5px solid var(--c2);
+      border-radius: 14px;
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+
+    section.part-skills h2 {
+      color: var(--c2);
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+
+    .skill-box {
+      background: var(--bg-item);
+      border-radius: 10px;
+      padding: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.14);
+    }
+
+    .skill-box:nth-child(1) { border-top: 3px solid var(--c2); }
+    .skill-box:nth-child(2) { border-top: 3px solid var(--c1); }
+    .skill-box:nth-child(3) { border-top: 3px solid var(--c3); }
+    .skill-box:nth-child(4) { border-top: 3px solid var(--c4); }
+
+    .skill-box h3 {
+      color: var(--text-main);
+      font-size: 1.04rem;
+      margin-bottom: 6px;
+    }
+
+    .skill-box p {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+    }
+
+    /* PART 7: ACHIEVEMENTS & FUTURE VISION */
+    section.part-vision {
+      background: var(--bg-panel);
+      border: 1px solid rgba(249, 115, 22, 0.35);
+      border-left: 5px solid var(--c7);
+      border-radius: 14px;
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+
+    section.part-vision h2 {
+      color: var(--c7);
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(249, 115, 22, 0.2);
+    }
+
+    section.part-vision .info-item strong {
+      color: var(--c7);
+    }
+
+    /* PART 8: COMMERCIAL PITCH, CONTACT & REAL BRAND LOGOS */
+    section.part-contact {
+      background: var(--bg-panel);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-left: 5px solid var(--c6);
+      border-radius: 14px;
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+
+    section.part-contact h2 {
+      color: var(--c6);
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .business-pitch {
+      background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(52, 211, 153, 0.08), rgba(167, 139, 250, 0.1));
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: 12px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .business-pitch p {
+      color: var(--text-main);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .business-pitch strong {
+      color: var(--c1);
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+    }
+
+    .social-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text-main);
+      background: var(--bg-item);
+      border-radius: 12px;
+      padding: 14px 16px;
+      border: 1px solid rgba(148, 163, 184, 0.16);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    .social-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .social-icon {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+    }
+
+    .social-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    .social-info span {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .social-info strong {
+      font-size: 0.96rem;
+      color: var(--text-main);
+      word-break: break-word;
+    }
+
+    .brand-whatsapp { border-left: 4px solid #25D366; }
+    .brand-whatsapp:hover { border-color: #25D366; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.22); }
+    .brand-whatsapp .social-icon { background: #25D366; }
+    .brand-whatsapp .social-info span { color: #25D366; }
+
+    .brand-gmail { border-left: 4px solid #EA4335; }
+    .brand-gmail:hover { border-color: #EA4335; box-shadow: 0 8px 20px rgba(234, 67, 53, 0.22); }
+    .brand-gmail .social-icon { background: #EA4335; }
+    .brand-gmail .social-info span { color: #f87171; }
+
+    .brand-instagram { border-left: 4px solid #E1306C; }
+    .brand-instagram:hover { border-color: #E1306C; box-shadow: 0 8px 20px rgba(225, 48, 108, 0.25); }
+    .brand-instagram .social-icon {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    }
+    .brand-instagram .social-info span { color: #f472b6; }
+
+    .brand-tiktok { border-left: 4px solid #00F2EA; }
+    .brand-tiktok:hover { border-color: #FF0050; box-shadow: 0 8px 20px rgba(0, 242, 234, 0.22); }
+    .brand-tiktok .social-icon {
+      background: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: -2px -2px 0 #00F2EA, 2px 2px 0 #FF0050;
+    }
+    .brand-tiktok .social-info span { color: #00F2EA; }
+
+    .brand-youtube { border-left: 4px solid #FF0000; }
+    .brand-youtube:hover { border-color: #FF0000; box-shadow: 0 8px 20px rgba(255, 0, 0, 0.22); }
+    .brand-youtube .social-icon { background: #FF0000; }
+    .brand-youtube .social-info span { color: #f87171; }
+
+    .brand-facebook { border-left: 4px solid #1877F2; }
+    .brand-facebook:hover { border-color: #1877F2; box-shadow: 0 8px 20px rgba(24, 119, 242, 0.24); }
+    .brand-facebook .social-icon { background: #1877F2; }
+    .brand-facebook .social-info span { color: #60a5fa; }
+
+    .info-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .info-item {
+      background: var(--bg-item);
+      border: 1px solid rgba(148, 163, 184, 0.14);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .info-item strong {
+      display: block;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+
+    /* PART 9: FOOTER */
+    footer.part-footer {
+      text-align: center;
+      padding: 28px 20px 38px;
+      background: var(--bg-panel);
+      border-top: 3px solid var(--c1);
+      animation: sevenColorBorder 14s linear infinite;
+    }
+
+    .credit-line {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-style: italic;
+      font-size: 1.04rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3), var(--c4), var(--c5), var(--c6), var(--c7));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: sevenColorFlow 12s linear infinite;
+      margin-bottom: 6px;
+    }
+
+    .sub-footer-note {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="part-header">
+    <div class="badge">Telecommunication &amp; Networking | Cybersecurity | Tech Educator</div>
+    <h1>Aggrey Seiph Kassim</h1>
+    <p class="subtitle">
+      Born 02 June 2004 in Rungwe District, Mbeya &bull; Year 3 Student in BSc Telecommunication
+      and Networking Engineering at KIST (Zanzibar) &bull; Aspiring Ethical Cybersecurity Specialist
+    </p>
+    <nav>
+      <a href="#photos">Profile Photo</a>
+      <a href="#identity">Identity</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#vision">Goals &amp; Football</a>
+      <a href="#contact">Hire &amp; Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="photos" class="part-gallery">
+      <h2>My Profile Photo</h2>
+      <div class="single-photo-wrap">
+        <div class="photo-card">
+          <div class="photo-frame">
+            <img
+              class="smart-photo"
+              data-candidates='["images/WhatsApp Image 2026-11-26 at 07.05.40 (2).jpeg","images/WhatsApp Image 2026-11-26 at 07.05.40.jpg","images/WhatsApp Image 2026-11-26 at 07.05.40 (1).jpg","images/pic1.jpg","images/pic1.jpeg","images/pic1.png"]'
+              src="images/WhatsApp%20Image%202026-11-26%20at%2007.05.40%20(2).jpeg"
+              alt="Aggrey Seiph Kassim"
+            />
+          </div>
+          <h3>Aggrey Seiph Kassim</h3>
+          <p>Telecom &amp; Networking Engineering &bull; Cybersecurity</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="part-stats">
+      <div class="stat-box">
+        <div class="num">22 Years</div>
+        <div class="label">Born 02 / 06 / 2004</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">Year 3</div>
+        <div class="label">BSc Telecom &amp; Networking (KIST)</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">PGM Div. I</div>
+        <div class="label">High Rating: Maths, Physics &amp; Geo</div>
+      </div>
+      <div class="stat-box">
+        <div class="num">@ggreycodeskills</div>
+        <div class="label">IG, TikTok, YouTube &amp; Facebook</div>
+      </div>
+    </div>
+
+    <section id="identity" class="part-identity">
+      <h2>Who I Am</h2>
+      <p style="margin-bottom: 14px; color: var(--text-muted);">
+        My name is <strong>Aggrey Seiph Kassim</strong>. I was born on <strong>02 June 2004</strong> in
+        <strong>Rungwe District, Mbeya</strong>, and I am currently <strong>22 years old</strong>.
+      </p>
+      <ul class="info-list">
+        <li class="info-item">
+          <strong>Full Name</strong>
+          Aggrey Seiph Kassim
+        </li>
+        <li class="info-item">
+          <strong>Birth Date &amp; Age</strong>
+          02 June 2004 (22 Years Old)
+        </li>
+        <li class="info-item">
+          <strong>Place of Birth</strong>
+          Rungwe District, Mbeya
+        </li>
+        <li class="info-item">
+          <strong>Global AI &amp; Data Science</strong>
+          Participant in GCI World &mdash; The University of Tokyo, Japan
+        </li>
+        <li class="info-item">
+          <strong>Core Focus</strong>
+          Web Development, Networking, Python, C++ &amp; Ethical Cybersecurity
+        </li>
+        <li class="info-item">
+          <strong>Passion &amp; Mission</strong>
+          Football &amp; Sharing Deep Tech Knowledge
+        </li>
+      </ul>
+    </section>
+
+    <section id="education" class="part-education">
+      <h2>Education Journey (Nursery to University)</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Karume Institute of Science and Technology (KIST) &mdash; Zanzibar (Year 3)</h3>
+          <p>
+            Initially enrolled to pursue a Bachelor of Aircraft Maintenance Engineering, then transitioned
+            within two weeks into a <strong>BSc in Telecommunication and Networking Engineering</strong>,
+            where I am currently in <strong>Year 3</strong> and progressing steadily.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Njombe High School &mdash; Advanced Level (PGM)</h3>
+          <p>
+            Completed Advanced Level studies in <strong>PGM (Physics, Geography, Mathematics)</strong>
+            and achieved a strong <strong>Division One</strong> with high ratings in Mathematics,
+            Physics, and Geography.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Lyoto Secondary School &mdash; Ordinary Level</h3>
+          <p>
+            Completed secondary education with strong results and advanced smoothly to Advanced Level.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Lyoto Primary School &amp; God's of Bridge Nursery</h3>
+          <p>
+            Started early education at <strong>God's of Bridge Nursery</strong>, transferred to
+            <strong>Lyoto Primary School</strong>, and graduated Standard Seven with strong results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="part-skills">
+      <h2>Career Strengths &amp; Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Web Development</h3>
+          <p>Building structured, clean, and responsive websites and web applications.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Networking</h3>
+          <p>Telecommunication systems, routing and switching principles, and network operations.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Python &amp; C++ Programming</h3>
+          <p>Writing programs, algorithms, and technical solutions in Python and C++.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Cybersecurity (Ethical Hacking)</h3>
+          <p>Focused on ethical hacking and security engineering toward a future Master's in Cybersecurity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="part-vision">
+      <h2>Achievements, Football &amp; Future Goals</h2>
+      <ul class="info-list">
+        <li class="info-item">
+          <strong>Consistent Academic Results</strong>
+          Strong performance from nursery, primary, secondary, and advanced levels into Year 3 at KIST.
+        </li>
+        <li class="info-item">
+          <strong>Future Master's Goal</strong>
+          Planning to pursue a <strong>Master's degree in Ethical Cybersecurity</strong> in the coming years.
+        </li>
+        <li class="info-item">
+          <strong>Empowering Others in Tech</strong>
+          Dedicated to sharing high-impact technology knowledge with learners and communities worldwide.
+        </li>
+        <li class="info-item">
+          <strong>Football Enthusiast</strong>
+          Passionate about <strong>football</strong> alongside engineering and cybersecurity.
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" class="part-contact">
+      <h2>Commercial Services &amp; Official Contact</h2>
+      <div class="business-pitch">
+        <p>
+          Welcome! I deliver professional <strong>Web Development</strong> solutions for <strong>small,
+          medium, and large projects</strong>, and I work as a <strong>Telecommunication and Network
+          Engineer</strong> and <strong>Cybersecurity Specialist</strong>, while also participating in
+          <strong>GCI World (The University of Tokyo, Japan)</strong>. Reach out directly for client
+          projects, technical consulting, or collaborations.
+        </p>
+      </div>
+
+      <div class="social-grid">
+        <a class="social-card brand-whatsapp" href="https://wa.me/255761547594" target="_blank" rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.3-.13.58.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.41.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.39-.24.65-.14.27.1 1.69.8 1.98.94.29.14.48.22.55.34.07.12.07.69-.17 1.37z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <span>WhatsApp / Phone</span>
+            <strong>+255 761 547 594</strong>
+          </div>
+        </a>
+
+        <a class="social-card brand-gmail" href="mailto:kassimaggrey57@gmail.com">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.2-8 5-8-5V6l8 5 8-5v2.2z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <span>Email (Gmail)</span>
+            <strong>kassimaggrey57@gmail.com</strong>
+          </div>
+        </a>
+
+        <a class="social-card brand-instagram" href="https://instagram.com/ggreycodeskills" target="_blank" rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <span>Instagram</span>
+            <strong>@ggreycodeskills</strong>
+          </div>
+        </a>
+
+        <a class="social-card brand-tiktok" href="https://www.tiktok.com/@ggreycodeskills" target="_blank" rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <span>TikTok</span>
+            <strong>@ggreycodeskills</strong>
+          </div>
+        </a>
+
+        <a class="social-card brand-youtube" href="https://www.youtube.com/@ggreycodeskills" target="_blank" rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.55 9.38.55 9.38.55s7.5 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <span>YouTube</span>
+            <strong>@ggreycodeskills</strong>
+          </div>
+        </a>
+
+        <a class="social-card brand-facebook" href="https://www.facebook.com/ggreycodeskills" target="_blank" rel="noopener">
+          <div class="social-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/>
+            </svg>
+          </div>
+          <div class="social-info">
+            <span>Facebook</span>
+            <strong>@ggreycodeskills</strong>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="part-footer">
+    <p class="credit-line">
+      &copy; 2026 &mdash; Created by Engineer Aggrey Seiph Kassim from Bachelor of
+      Telecommunication and Networking Engineering, KIST Zanzibar.
+    </p>
+    <p class="sub-footer-note">All Rights Reserved</p>
+  </footer>
+
+  <script>
+    (function () {
+      document.querySelectorAll("img.smart-photo").forEach((img) => {
+        let candidates = [];
+        try {
+          candidates = JSON.parse(img.getAttribute("data-candidates") || "[]");
+        } catch (e) {
+          candidates = [];
+        }
+        let idx = 0;
+        img.addEventListener("error", function onError() {
+          idx += 1;
+          if (idx < candidates.length) {
+            img.src = encodeURI(candidates[idx]);
+          } else {
+            img.removeEventListener("error", onError);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
